@@ -1,19 +1,30 @@
 package org.example;
+import java.util.ArrayList;
+import java.util.List;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Toy toy1 = new Toy(0, "Кукла", 25);
+        Toy toy2 = new Toy(1, "Машинка", 40);
+        Toy toy3 = new Toy(2, "Робот", 3);
+        Toy toy4 = new Toy(3, "Матрёшка", 65);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        List<Toy> toys = new ArrayList<Toy>();
+        toys.add(toy4);
+        toys.add(toy3);
+        toys.add(toy2);
+        toys.add(toy1);
+
+        ToyStore toyStore = new ToyStore(toys);
+        toyStore.saveToyForLottery();
+        toyStore.saveToyForLottery();
+        toyStore.saveToyForLottery();
+        toyStore.saveToyForLottery();
+
+
     }
+
+
 }
